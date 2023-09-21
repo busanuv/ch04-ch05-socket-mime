@@ -47,7 +47,7 @@ public class MyServer {
     }
 
     private String parser(String mimeType){
-        Data data = new Data("SocketStudy", "portAndIp");
+        Data data = new Data("SocketStudy", "mime type study ing....");
         if(mimeType.equals(MimeType.TEXT_HTML)){
             return "<body>title : "+data.getTitle()+"<br/> content : "+data.getContent()+"</body>";
         }else if(mimeType.equals(MimeType.FORM_URLENCODED)){
@@ -56,7 +56,6 @@ public class MyServer {
             Gson gson = new Gson();
             return gson.toJson(data);
         }
-
         return "badRequest";
     }
 
